@@ -1,5 +1,5 @@
 Introduction
-The online job portal system is a platform between job seeker(student) and job provider(company). The Student or Job seeker can easily find and apply for job by login into system. The Employer or company can easily get expert employee from our job portal site by posting a job. The job portal website is a common place between job seeker and company.
+The online job portal application is a platform between job seeker(student) and job provider(company). The Student or Job seeker can easily find and apply for job by login into system. The Employer or company can easily get expert employee from our job portal site by posting a job. The job portal website is a common place between job seeker and company.
 
 When job seeker can login in his account then he can get notification of company lists which match with his profile  or education detail. so job seeker can easily apply to this job and he can also send message to company for other inquiry.
 
