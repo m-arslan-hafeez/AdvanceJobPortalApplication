@@ -1,0 +1,1 @@
+The Job Portal Application is a advance web based application developed in ASP.Net with C# language as front end and as back end we use SQL Server for database. This application developed for job seeker and recruiter. This application also provide intermediate place for job seeker and company.
