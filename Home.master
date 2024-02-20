@@ -1,0 +1,436 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="HRM_Home"  %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Job Portal Application</title>
+     <link href="StyleSheet.css" rel="Stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">     
+       
+        
+      
+        
+        .style1
+        {
+            width: 100%;
+        }
+        .style3
+        {
+            width: 3px;
+        }
+       
+        
+      
+        
+        .style4
+        {
+            width: 227px;
+        }
+        .style5
+        {
+            text-align: right;
+            font-family: Calibri;
+            font-size: 14px;
+            font-weight: bold;
+            color: #002D00;
+            width: 137px;
+        }
+       
+        
+      
+        
+        .style9
+        {
+            color: #006600;
+        }
+       
+        
+      
+        
+        .style10
+        {
+            width: 775px;
+        }
+       
+        
+      
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+   <div id="top" style="text-align: center">
+    
+        <table class="style10">
+            <tr>
+                <td>
+                    <asp:Image ID="Image2" runat="server" ImageUrl="~/logo/jportallogo.png" />
+                </td>
+                <td>
+    
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/logo/jportall.png" />
+                </td>
+            </tr>
+        </table>
+   </div>
+    <div id="body">
+    <div id="login" align="right">
+        <table class="style1">
+            <tr>
+                <td width="166" class="mnu">
+                  <a href="Home.aspx" class="a">HOME</a></td>
+                       <td width="166" class="mnu">
+                        <a href="NewJobSeeker.aspx" class="a">   JOBSEEKER</a></td>
+                       <td width="166" class="mnu">
+                         <a href="NewCompany.aspx" class="a">  NEW COMPANY</a></td>
+                       <td width="166" class="mnu">
+                        <a href="Admin/Login.aspx" class="a">   Admin Login</a></td>
+                       <td width="166" class="mnu">
+                         <a href="Feedback.aspx" class="a">  FEED BACK</a></td>
+                       <td width="166" class="mnu">
+                          <a href="Contactus.aspx" class="a"> CONTACT US</a></td>
+                   </tr>
+               </table>
+           </div>
+           <div id="cont">
+               <table class="style1">
+                   <tr>
+                       <td valign="top" width="250">
+                           <table class="style1">
+                               <tr>
+                                   <td>
+                                       <table class="tbl">
+                                           <tr>
+                                               <td class="tblhead" colspan="2">
+                                                   Job Seeker Login Area</td>
+                                           </tr>
+                                           <tr>
+                                               <td colspan="2">
+                                                   <asp:Label ID="lblj" runat="server" 
+                                                       style="color: #CC0000; font-family: Calibri"></asp:Label>
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td class="lbl">
+                                                   UserName :</td>
+                                               <td>
+                                                   <asp:TextBox ID="txtjname" runat="server" CssClass="txt"></asp:TextBox>
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td class="lbl">
+                                                   Password :</td>
+                                               <td>
+                                                   <asp:TextBox ID="txtjpass" runat="server" CssClass="txt" TextMode="Password"></asp:TextBox>
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td>
+                                                   &nbsp;</td>
+                                               <td>
+                                                   <asp:Button ID="btnjlogin" runat="server" CssClass="btn" Text="Login" 
+                                                       onclick="btnjlogin_Click" CausesValidation="False" />
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td>
+                                                   &nbsp;</td>
+                                               <td>
+                                                   <asp:LinkButton ID="LinkButton1" runat="server" CssClass="lnk" 
+                                                       PostBackUrl="~/NewJobseeker.aspx" CausesValidation="False">New JobSeeker ?</asp:LinkButton>
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td>
+                                                   &nbsp;</td>
+                                               <td>
+                                                   <asp:LinkButton ID="LinkButton2" runat="server" CssClass="lnk" 
+                                                       CausesValidation="False" PostBackUrl="~/JFPass.aspx">Forgot Password ?</asp:LinkButton>
+                                               </td>
+                                           </tr>
+                                       </table>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       &nbsp;</td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <table class="tbl">
+                                           <tr>
+                                               <td class="tblhead" colspan="2">
+                                                   Find Job by Category</td>
+                                           </tr>
+                                           <tr>
+                                               <td colspan="2">
+                                                   &nbsp;</td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style3">
+                                                   &nbsp;</td>
+                                               <td>
+                                                   <asp:DataList ID="DataList1" runat="server" 
+                                                       onitemcommand="DataList1_ItemCommand">
+                                                       <ItemTemplate>
+                                                           <table class="style1">
+                                                               <tr>
+                                                                   <td width="185">
+                                                                       <asp:LinkButton ID="lnkjob" runat="server" Text='<%#Eval("Skill") %>' CssClass="lnk" CausesValidation="false" ></asp:LinkButton>
+                                                                       <span class="style9"><b>(</b></span><asp:Label ID="Label1" runat="server" CssClass="lbl" Font-Bold="True" 
+                                                                           style="color: #006600" Text= '<%#Eval("Sk")%>'></asp:Label>
+                                                                       <span class="style9"><b>)</b></span></td>
+                                                               </tr>
+                                                           </table>
+                                                       </ItemTemplate>
+                                                   </asp:DataList>
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style3">
+                                                   &nbsp;</td>
+                                               <td>
+                                                   &nbsp;</td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style3">
+                                                   &nbsp;</td>
+                                               <td>
+                                                   &nbsp;</td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style3">
+                                                   &nbsp;</td>
+                                               <td>
+                                                   &nbsp;</td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style3">
+                                                   &nbsp;</td>
+                                               <td>
+                                                   &nbsp;</td>
+                                           </tr>
+                                       </table>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       &nbsp;</td>
+                               </tr>
+                           </table>
+                       </td>
+                       <td width="700" valign="top">
+                           <table class="style1">
+                               <tr>
+                                   <td>
+                                       <table class="tbl">
+                                           <tr>
+                                               <td class="tblhead" colspan="4">
+                                                   Find Job / Company Here within a Second !!</td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style5">
+                                                   Degree :</td>
+                                               <td>
+                            <asp:DropDownList ID="drpdegree" runat="server" CssClass="txt" Width="120px">
+                             <asp:ListItem>SELECT</asp:ListItem>
+                              <asp:ListItem>12 Pass</asp:ListItem>
+                               <asp:ListItem>Graduate</asp:ListItem>
+                            <asp:ListItem>Diploma</asp:ListItem>
+                                        <asp:ListItem>Degree</asp:ListItem>
+                                        <asp:ListItem>Masters</asp:ListItem>
+                                         <asp:ListItem>PHD</asp:ListItem>
+                            </asp:DropDownList>
+                                               </td>
+                                               <td class="style4">
+                                                   <asp:Button ID="Button2" runat="server" CssClass="btn" Text="Job" 
+                                                       Width="80px" CausesValidation="False" onclick="Button2_Click" />
+                                               </td>
+                                               <td>
+                                                   &nbsp;</td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style5">
+                                                   Skill :</td>
+                                               <td>
+                            <asp:DropDownList ID="drpskill" runat="server" CssClass="txt" Width="120px">
+                             <asp:ListItem>SELECT</asp:ListItem>
+                               <asp:ListItem>ASP.Net</asp:ListItem>
+                                        <asp:ListItem>VB.Net</asp:ListItem>
+                                        <asp:ListItem>Java</asp:ListItem>
+                                        <asp:ListItem>PHP</asp:ListItem>
+                            </asp:DropDownList>
+                                               </td>
+                                               <td class="style4">
+                                                   <asp:Button ID="Button1" runat="server" CssClass="btn" Text="Resume" 
+                                                       Width="80px" CausesValidation="False" onclick="Button1_Click" />
+                                               </td>
+                                               <td>
+                                                   &nbsp;</td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style5">
+                                                   &nbsp;</td>
+                                               <td colspan="2">
+                                                   <asp:Label ID="lblresult" runat="server" CssClass="lbl"></asp:Label>
+                                               </td>
+                                               <td>
+                                                   &nbsp;</td>
+                                           </tr>
+                                       </table>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       &nbsp;</td>
+                               </tr>
+                               <tr>
+                                   <td style="text-align: center" width="700">
+                                       <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder></td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       &nbsp;</td>
+                               </tr>
+                           </table>
+                       </td>
+                       <td valign="top" width="250">
+                           <table class="style1">
+                               <tr>
+                                   <td>
+                                       <table class="tbl">
+                                           <tr>
+                                               <td class="tblhead" colspan="2">
+                                                   Company Login Area</td>
+                                           </tr>
+                                           <tr>
+                                               <td colspan="2">
+                                                   <asp:Label ID="lblj0" runat="server" 
+                                                       style="color: #CC0000; font-family: Calibri"></asp:Label>
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td class="lbl">
+                                                   UserName :</td>
+                                               <td>
+                                                   <asp:TextBox ID="txtcname" runat="server" CssClass="txt"></asp:TextBox>
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td class="lbl">
+                                                   Password :</td>
+                                               <td>
+                                                   <asp:TextBox ID="txtcpass" runat="server" CssClass="txt" TextMode="Password"></asp:TextBox>
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td>
+                                                   &nbsp;</td>
+                                               <td>
+                                                   <asp:Button ID="btnjlogin0" runat="server" CssClass="btn" Text="Login" 
+                                                       onclick="btnjlogin0_Click" CausesValidation="False" />
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td>
+                                                   &nbsp;</td>
+                                               <td>
+                                                   <asp:LinkButton ID="LinkButton3" runat="server" CssClass="lnk" 
+                                                       PostBackUrl="~/NewCompany.aspx" CausesValidation="False">New Company ?</asp:LinkButton>
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td>
+                                                   &nbsp;</td>
+                                               <td>
+                                                   <asp:LinkButton ID="LinkButton4" runat="server" CssClass="lnk" 
+                                                       CausesValidation="False" PostBackUrl="~/CFPass.aspx">Forgot Password ?</asp:LinkButton>
+                                               </td>
+                                           </tr>
+                                       </table>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       &nbsp;</td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <table class="tbl">
+                                           <tr>
+                                               <td class="tblhead" colspan="2">
+                                                   Find Jobseeker by Category</td>
+                                           </tr>
+                                           <tr>
+                                               <td colspan="2">
+                                                   &nbsp;</td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style3">
+                                                   &nbsp;</td>
+                                               <td>
+                                                   <asp:DataList ID="DataList2" runat="server" 
+                                                       onitemcommand="DataList1_ItemCommand">
+                                                       <ItemTemplate>
+                                                           <table class="style1">
+                                                               <tr>
+                                                                   <td width="185">
+                                                                       <asp:LinkButton ID="lnkjob" runat="server" Text='<%#Eval("Skill") %>' CssClass="lnk" CausesValidation="false" ></asp:LinkButton>
+                                                                       <span class="style9"><b>(</b></span><asp:Label ID="Label1" runat="server" CssClass="lbl" Font-Bold="True" 
+                                                                           style="color: #006600" Text= '<%#Eval("Sk")%>'></asp:Label>
+                                                                       <span class="style9"><b>)</b></span></td>
+                                                               </tr>
+                                                           </table>
+                                                       </ItemTemplate>
+                                                   </asp:DataList>
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style3">
+                                                   &nbsp;</td>
+                                               <td>
+                                                   &nbsp;</td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style3">
+                                                   &nbsp;</td>
+                                               <td>
+                                                   &nbsp;</td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style3">
+                                                   &nbsp;</td>
+                                               <td>
+                                                   &nbsp;</td>
+                                           </tr>
+                                           <tr>
+                                               <td class="style3">
+                                                   &nbsp;</td>
+                                               <td>
+                                                   &nbsp;</td>
+                                           </tr>
+                                       </table>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       &nbsp;</td>
+                               </tr>
+                           </table>
+                       </td>
+                   </tr>
+               </table>
+           </div>
+    </div> 
+    </form>
+    <div id="foot">All the Rights Reserved @ 2018</div>
+        
+    
+    </form>
+</body>
+</html>

@@ -1,0 +1,247 @@
+﻿body 
+{
+	/*background:#D5F0E2;*/
+	background:#f2f2f2;
+}
+
+#top
+{
+	width:1000px;
+	height:90px;
+	background:#DDBBFF;
+	margin-left:115px;
+	text-align:left;
+	font-family:Amaranth;
+	font-size:55px;
+	font-weight:bold;
+	border-style:solid;
+	border-width:1px;
+	border-color:Gray;
+	}
+	#login
+	{
+	width:1000px;	
+	background:#E9D2FF;
+	margin-top:0px;
+	margin-left:0px;
+    height:30px;
+	text-align: center;
+}
+	
+	#body
+	{
+	width:1000px;	
+	background:white;
+	border-style:solid;
+	border-width:1px;
+	border-color:Gray;
+	margin-top:0px;
+	margin-left:115px;
+    height:auto;
+	}
+
+		
+#foot
+{
+	width:1000px;
+	height:20px;
+	background:#DDBBFF;
+	margin-left:115px;
+	text-align:center;
+	font-family:Calibri;
+	font-size:small;
+	color:Black;
+	margin-top:0px;
+border-style:solid;
+	border-width:1px;
+	border-color:Gray;
+	}
+	
+	
+	
+	#cont
+	{
+	width:1000px;
+	height:auto;
+	margin-left:0px;		
+	}
+	
+	
+	#reg
+	{
+	width:500px;
+	height:400px;
+	margin-left:500px;		
+	margin-top:-400px;
+	}
+		
+	.txt
+	{
+		width:105px;
+		
+		border-style:solid;
+	border-color:#E9D2FF;
+	border-width:1px;
+	float:left;
+	}
+	.txtt
+	{
+	width:180px;
+	border-bottom-left-radius:2px;
+	border-bottom-right-radius:2px;
+	border-top-left-radius:2px;
+	border-top-right-radius:2px;
+	height:26px;
+	border-style:groove;
+	border-color:Gray;
+	border-width:.5px;	
+			}
+			
+	.lbl
+	{
+	text-align:right;
+	font-family:Calibri;
+	font-size:14px;
+	font-weight:bold;
+	color:#002D00;
+				
+				}
+	.lbll
+		{
+		text-align:right;
+		font-family:Amaranth;
+		font-size:large;
+		font-weight:bold;
+		color:#333333;
+		}
+	.btn
+	{	background:#DDBBFF;
+	font-family:Arial Baltic;
+	font-weight:bold;
+	color:Black;
+	height:24px;
+	}
+				
+	.btn:hover
+	{
+
+	background:Gray;
+	font-family:Arial Baltic;
+	font-weight:bold;
+	color:Yellow;
+	}
+	
+	.tbl
+	{
+		border: thin solid #9bddbc; width: 100%;
+		
+		border-bottom-left-radius:6px;
+		border-bottom-right-radius:6px;
+		}
+		
+		.tblhead
+		{
+			background-color: #E9D2FF; border-bottom-style: solid; border-bottom-width: thin; 
+			border-bottom-color: #9bddbc; font-family: Calibri; font-size: medium; font-weight: bold; 
+			text-align: center;
+			color:#002D00;
+			}
+			
+.lnk
+	{	
+	font-family:Arial Baltic;
+	font-weight:bold;
+	color:#50009F;
+	text-align:right;
+	font-family:Calibri;
+	font-size:14px;
+	
+	}
+				
+	.lnk:hover
+	{
+
+	
+	font-family:Arial Baltic;
+	font-weight:bold;
+	color:DarkGreen;
+	text-align:right;
+	font-family:Calibri;
+	font-size:14px;
+	
+	}
+	
+	.mnu
+{
+	
+	font-family:Arial Baltic;
+	font-weight:bold;
+	
+	text-align:center;
+	font-family:Calibri;
+	font-size:16px;
+	text-decoration:none;
+	height:24px;
+	border-bottom-left-radius:6px;
+		border-bottom-right-radius:6px;
+			border-top-left-radius:6px;
+		border-top-right-radius:6px;
+		border-color:#9bddbc;
+		border-style:solid;
+		border-width:1px;
+	
+	}
+	
+	.mnu:hover
+	{text-decoration:none;font-family:Arial Baltic;
+	font-weight:bold;
+	
+	text-align:center;
+	font-family:Calibri;
+	font-size:16px;height:24px;
+		background:#DDBBFF;
+			border-bottom-left-radius:6px;
+		border-bottom-right-radius:6px;
+			border-top-left-radius:6px;
+		border-top-right-radius:6px;
+			border-color:Yellow;
+		border-style:solid;
+		border-width:1px;
+	
+		}
+		
+		.a
+		{
+			color:DarkGreen;
+			text-decoration:none;
+			}
+			.a:hover
+			{
+				color:Red;
+				text-decoration:none;
+				}
+				
+				
+					.mnu
+		{
+			background-color: #E9D2FF; border-bottom-style: solid; border-bottom-width: thin; 
+			border-bottom-color: #9bddbc; font-family: Calibri; font-size: medium; font-weight: bold; 
+			text-align: center;
+			color:#002D00;
+			}
+			
+				.mnu:hover
+		{
+			background-color: #DDBBFF; border-bottom-style: solid; border-bottom-width: thin; 
+			border-bottom-color: #9bddbc; font-family: Calibri; font-size: medium; font-weight: bold; 
+			text-align: center;
+			color:#002D00;
+			}
+			
+			.tblmnu
+	{
+		border: thin solid #9bddbc; width: 100%;
+		
+		border-bottom-left-radius:2px;
+		border-bottom-right-radius:2px;
+		}
